@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=DM+Sans:wght@400;500&display=swap');
+
+:root {
+    --cor-principal: #007306;
+    --cor-secundaria: #0a9621;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Header */
+#main-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.nav-links a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Seções */
+.section-padrao {
+    padding: 80px 5%;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-principal);
+}
+
+/* Sobre */
+.section-sobre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 5%;
+    gap: 40px;
+}
+
+.sobre-conteudo {
+    flex: 1;
+}
+
+.sobre-conteudo p {
+    margin: 15px 0 30px;
+}
+
+.sobre-foto-container {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sobre-foto-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-principal, .btn-secundario {
+    display: inline-block;
+    background-color: var(--cor-principal);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-principal:hover, .btn-secundario:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Cards */
+.cards-escolaridade {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card-educacao {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    width: 45%;
+}
+
+/* Habilidades */
+.habilidades-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Projetos */
+.cards-projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.card-projeto-horizontal {
+    background-color: white;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 25px;
+}
+
+.img-placeholder-grande {
+    width: 40%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.projeto-conteudo-horizontal {
+    flex: 1;
+}
+
+.btn-secundario {
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .section-sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card-educacao {
+        width: 100%;
+    }
+    .card-projeto-horizontal {
+        flex-direction: column;
+        text-align: center;
+    }
+    .img-placeholder-grande {
+        width: 100%;
+    }
+}
